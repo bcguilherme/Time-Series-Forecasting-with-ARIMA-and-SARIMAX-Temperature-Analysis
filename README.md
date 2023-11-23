@@ -1,5 +1,3 @@
-# arima-temperature
-
 Time Series Analysis with ARIMA and SARIMAX
 
 This repository contains Python code for time series analysis using ARIMA and SARIMAX models. The analysis includes data manipulation, exploratory data analysis, and forecasting temperature data.
@@ -37,7 +35,6 @@ Usage
 
     bash
 
-git clone https://github.com/your-username/your-repo.git
 
 Navigate to the project directory:
 
