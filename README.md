@@ -1,53 +1,76 @@
 # arima-temperature
 
-Análise de Séries Temporais e Previsão de Temperatura Mínima Diária
+Time Series Analysis with ARIMA and SARIMAX
 
-Este projeto tem como objetivo realizar uma análise de séries temporais em um conjunto de dados que registra a temperatura mínima diária de 1981 a 1990. Ele também abrange a previsão da temperatura mínima diária usando modelos ARIMA (Modelo Autorregressivo Integrado de Médias Móveis) e SARIMA (Modelo Autorregressivo Integrado de Médias Móveis com Componente Sazonal).
+This repository contains Python code for time series analysis using ARIMA and SARIMAX models. The analysis includes data manipulation, exploratory data analysis, and forecasting temperature data.
+Table of Contents
 
-Bibliotecas Utilizadas:
+    Introduction
+    Dependencies
+    Usage
+    Code Explanation
+    License
 
-pandas: para manipulação dos dados.
-numpy: para operações matemáticas.
-matplotlib: para plotagem de gráficos.
-statsmodels: para modelagem estatística e previsão de séries temporais.
-pmdarima: para auxiliar na seleção de hiperparâmetros do modelo ARIMA.
-Passos Realizados:
+Introduction
 
-Carregamento dos Dados:
+This project focuses on time series analysis of temperature data using ARIMA and SARIMAX models. The code includes steps for data reading, manipulation, exploratory data analysis, and visualization. The ARIMA and SARIMAX models are applied to forecast future temperatures.
+Dependencies
 
-Os dados de temperatura mínima diária são lidos a partir de um arquivo Excel e são convertidos em um DataFrame do pandas.
-Os dados são indexados pela coluna de datas e as datas são parseadas para o formato apropriado.
-Pré-Processamento:
+Make sure you have the following Python libraries installed:
 
-Uma nova coluna chamada "New Column" é criada, contendo os valores de temperatura mínima diária como floats.
-O DataFrame é ordenado pelo índice de datas.
-Análise Exploratória:
+    pandas
+    numpy
+    matplotlib
+    statsmodels
+    pmdarima
+    scipy
 
-O conjunto de dados é explorado por meio de visualizações, como gráficos de séries temporais.
-Decomposição da Série Temporal:
+You can install the required packages using the following command:
 
-A decomposição sazonal da série temporal é realizada usando o método de decomposição aditiva.
-Teste de Estacionariedade:
+bash
 
-O teste ADF (Augmented Dickey-Fuller) é aplicado à série temporal original e à série temporal diferenciada para verificar a estacionariedade.
-Modelagem ARIMA:
+pip install -r requirements.txt
 
-Utilizando a biblioteca pmdarima, um modelo ARIMA é ajustado aos dados, otimizando automaticamente os hiperparâmetros.
-Modelagem SARIMA:
+Usage
 
-Um modelo SARIMA (Modelo Autorregressivo Integrado de Médias Móveis com Componente Sazonal) é ajustado aos dados.
-Previsão:
+    Clone the repository:
 
-O modelo SARIMA é usado para fazer previsões da temperatura mínima diária.
-Visualização das Previsões:
+    bash
 
-As previsões são visualizadas juntamente com os dados reais em um gráfico.
-Avaliação do Modelo:
+git clone https://github.com/your-username/your-repo.git
 
-O RMSE (Erro Quadrático Médio) é calculado para avaliar o desempenho do modelo de previsão.
-Para executar este código, você deve ter as bibliotecas mencionadas no início instaladas em seu ambiente Python. Certifique-se de ter o arquivo 'temperature.xlsx' com os dados de temperatura mínima diária no mesmo diretório.
+Navigate to the project directory:
 
-Observações:
+bash
 
-A estacionariedade da série temporal é importante para a aplicação de modelos ARIMA. Foram feitos testes ADF para verificar a estacionariedade.
-O modelo SARIMA é ajustado para prever os próximos valores da temperatura mínima com base nos dados históricos.
+cd your-repo
+
+Run the Jupyter Notebook or Python script:
+
+bash
+
+    python analysis_script.py
+
+    Explore the results and visualizations.
+
+Code Explanation
+
+The code is organized into several sections, including:
+
+    Importing Libraries
+    Installing Required Packages
+    Reading Data
+    Data Manipulation
+    Exploratory Data Analysis
+    Data Visualization
+    Time Series Decomposition
+    Augmented Dickey-Fuller Test
+    Auto ARIMA Model
+    SARIMAX Model
+    Model Summary and Prediction
+    Visualization of Predictions
+
+Refer to the code comments and Code Explanation section in the README for detailed information.
+License
+
+This project is licensed under the MIT License.
